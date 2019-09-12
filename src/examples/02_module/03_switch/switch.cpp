@@ -21,7 +21,7 @@ string menu(int menu_option)
 		return"option 3";
 	case 4:
 		return "option 4";
-	defualt:
+	default:
 		return "invalid";
 	}
 	return 0;
