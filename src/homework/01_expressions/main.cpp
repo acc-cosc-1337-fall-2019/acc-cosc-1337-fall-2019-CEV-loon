@@ -10,8 +10,8 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 int main()
 {
 	cout<< "enter numbers";
-	cin >> num1;
-	cin >> num2;
+	cin >> "num1";
+	cin >> "num2";
 
 	return 0;
 }
