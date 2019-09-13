@@ -2,7 +2,7 @@
 #include "expressions.h"
 #include "expressions.ccp"
 //write namespace using statement for cout
-using std::cout, using std::cin
+using std::cout; using std::cin;
 
 /*
 Call multiply_numbers with 10 and 10 parameter values and display function result
