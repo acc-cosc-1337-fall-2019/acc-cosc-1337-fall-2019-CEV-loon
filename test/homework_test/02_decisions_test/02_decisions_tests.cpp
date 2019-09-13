@@ -7,5 +7,5 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("verify test", "verification")
 {
-	require(gpa == 3 true);
+	REQUIRE(gpa == 3 true);
 }
