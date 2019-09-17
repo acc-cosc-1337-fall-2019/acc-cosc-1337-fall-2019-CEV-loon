@@ -1,8 +1,9 @@
-#include "sample_while.h"
 
+#include "while.h"
+#include "loops.h"
 int main() 
 {
-	display("hello");
+	//display("hello");
 
 	return 0;
 }

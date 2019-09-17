@@ -17,6 +17,6 @@ int main()
 	cin >> year;
 	
 	std::string get_generation(int year);
-	cout << "generation: " << generation;
+	cout << "generation: " << "generation" ;
 	return 0;
 }

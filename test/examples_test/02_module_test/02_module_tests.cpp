@@ -21,3 +21,11 @@ TEST_CASE("test get generation")
 		REQUIRE(get_generation(1940) == "silent generation")
 		REQUIRE(get_generation(1776) == "invalid")
 }
+TEST_CASE("test menu function")
+{
+	REQUIRE(menu(1) == "option 1");
+	REQUIRE(menu(2) == "option 2");
+	REQUIRE(menu(3) == "option 3");
+	REQUIRE(menu(14) == "option 4");
+	REQUIRE(menu(100) == "invalid");
+}
