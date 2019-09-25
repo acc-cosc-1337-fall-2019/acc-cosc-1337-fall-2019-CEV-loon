@@ -1,5 +1,6 @@
 //Write void function protype named prompt_user with no parameters
 #include <string>
+#include<iostream>
 using std::string
 
 
