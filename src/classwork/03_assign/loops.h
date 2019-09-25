@@ -3,4 +3,4 @@
 #include <iostream>
 #include <string>
 
-int factoral = (!int "num1" , int ) ;
+auto factoral = (!'num', auto) ;

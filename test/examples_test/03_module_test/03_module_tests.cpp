@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "while.h"
 #include"value_ref.h"
+#include "vec.h"
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
@@ -19,3 +20,33 @@ TEST_CASE("test function ref parameters")
 	REQUIRE(v == 5);
 	REQUIRE(r == 50);
 }
+TEST_CASE("test pass by value")
+{
+	std::vector<int> nums = { 99,55,1,3,66 };
+	std::vector<int> nums_exspected = { 99,55,1,3,66 };
+	loop_vector_w_index(nums);
+	REQUIRE(nums == nums_exspected);
+
+}
+TEST_CASE("test pass by ref")
+{
+	std::vector<int> nums = { 99,55,1,3,66 };
+	std::vector<int> nums_exspected = { 99,55,1,3,66 };
+	loop_vector_w_index_ref(nums);
+	REQUIRE(nums == nums_exspected);
+
+}
+TEST_CASE("test pass by ref for ranged")
+{
+	std::vector<int> nums = { 99,55,1,3,66 };
+	std::vector<int> nums_exspected = { 99,55,1,3,66 };
+	loop_vector_w_index_ref(nums);
+	REQUIRE(nums == nums_exspected);
+
+}
+TEST_CASE("test pass by loop by ref")
+{
+	std::vector<int> nums = { 99,55,1,3,66 };
+	std::vector<int> nums_exspected = { 1000,1000,1000,1000,1000 };
+	loop_vector_w_for_ranged_ref(nums);
+	REQUIRE(nums == nums_exspected);

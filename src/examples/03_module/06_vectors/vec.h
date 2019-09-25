@@ -26,4 +26,6 @@ void loop_vector_w_index_ref(const std::vector<int>& nums);
 
 
 
-void loop_vector_w_f_ranged(const std::vector<int>& nums);
+void loop_vector_w_f_ranged( std::vector<int>& nums);
+
+void loop_vector_w_f_ranged_ref_var(std::vector<int>& nums);
