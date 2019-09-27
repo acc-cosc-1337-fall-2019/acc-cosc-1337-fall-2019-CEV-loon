@@ -15,6 +15,12 @@ const reference vector of ints parameter that returns an int
 
 void get_max(const std::vector(int)& numbers);
 
+for (int i = 0; i < numbers.size(); ++i)
+{
+
+
+}
+
 /*
 Write a function prototype named is_prime with an integer parameter 
 thatgiven a number returns true if prime or false if not prime
@@ -48,9 +54,13 @@ the number
 
 void vector_of_primes(int)
 {
-	for (int i = 0; i < vector_of_primes.size(); i--)
+	for (int i = 0; i < vector_of_primes.size(); ++i)
 	{
-		std::cout << vector_of_primes[i] << "\n";
+		if (int%2 == 0)
+		{
+			std::cout << vector_of_primes[i] << "\n";
+		}
+		i=++i
 	}
 
 }
