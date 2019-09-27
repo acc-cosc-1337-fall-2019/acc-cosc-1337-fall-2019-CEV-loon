@@ -23,10 +23,7 @@ void loop_vector(const std::vector<int>& numbers)
 	std::vector<int>numbers={ 8,4,20,88,66,99 };
 
 
-	for (int i = 0; i < numbers.size(); ++i)
-	{
-		std::cout << numbers[i] << "\n";
-	}
+	
 
 }
 

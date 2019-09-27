@@ -23,7 +23,19 @@ thatgiven a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-void is_prime(int)
+void is_prime(int);
+{
+	if (int%2 = 0)
+	{
+		return "true";
+	}
+	else if (int%2 != 0)
+	{
+		return "false";
+	}
+
+}
+
 
 /*
 Write a a function prototype named vector_of_primes with an integer 
@@ -33,3 +45,12 @@ the number
 @param int integer value
 @return vector of ints containing prime values up to a value
 */
+
+void vector_of_primes(int)
+{
+	for (int i = 0; i < vector_of_primes.size(); i--)
+	{
+		std::cout << vector_of_primes[i] << "\n";
+	}
+
+}
