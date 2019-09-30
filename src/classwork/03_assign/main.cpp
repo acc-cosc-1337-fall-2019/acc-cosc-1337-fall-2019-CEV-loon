@@ -19,14 +19,14 @@ int main()
 		cout << "enter a number" << num1;
 		cin >> num1;
 		result = factoral(num1);
-		cout << "factorial " << resault;
+		cout << "factoral " << result;
 	}
 	
-			while(user_input=='y')
-			{
-				cout << "continue? y or n" << user_input;
-				cin >> user_input;
-				
+	    while (user_input == 'y')
+	{
+		cout << "continue? y or n" << user_input;
+		cin >> user_input;
+
 	}
 	return 0;
 }

@@ -35,9 +35,9 @@ void prompt_user()
 		case 1:
 			return "option 1";
 		case 2:
-			return"option 2";
+			return "option 2";
 		case 3:
-			return"option 3";
+			return "option 3";
 		case 4:
 			return "option 4";
 		default:
@@ -54,9 +54,9 @@ void prompt_user()
 			cout << "enter a choice";
 			cin >> choice;
 			while(choice>1 ||choice >4)
-			cout menu(choice)<<"/n";
-			cout <<"conti9nue y or n";
-			cin user_choice;
+			cout<< menu(choice)<<"/n";
+			cout <<"continue y or n";
+			cin>> user_choice;
 		} while (user_choice == 'y' || user_choice == 'y'); 
 	}
 }

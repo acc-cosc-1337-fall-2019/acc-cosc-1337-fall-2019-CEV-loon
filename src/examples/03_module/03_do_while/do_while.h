@@ -1,11 +1,12 @@
 //Write void function protype named prompt_user with no parameters
 #include <string>
 #include<iostream>
+
 using std::string
 
 
 
-void prompt_user();
+void prompt_user()
 string menu(int menu_option);
 
 //Write void function protype named run_menu with no parameters
