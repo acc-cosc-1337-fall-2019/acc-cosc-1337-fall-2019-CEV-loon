@@ -7,8 +7,15 @@ and display them to screen.
 Program continues until user decides to exit.
 
 */
+#include"vectors.h"
+
 int main() 
 {
+	void loop_vector();
+	std::vector<int> numbers = { 8,4,20,88,66,99 };
+
+		loop_vector(numbers);
+
 
 	return 0;
 }
