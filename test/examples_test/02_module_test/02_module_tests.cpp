@@ -14,12 +14,12 @@ TEST_CASE("test is even function")
 
 TEST_CASE("test get generation")
 {
-	REQUIRE(get_generation(2000) == "centenial")
-		REQUIRE(get_generation(1990) == "millenial")
-		REQUIRE(get_generation(1975) == "generation x")
-		REQUIRE(get_generation(1960) == "baby boomer")
-		REQUIRE(get_generation(1940) == "silent generation")
-		REQUIRE(get_generation(1776) == "invalid")
+	REQUIRE(get_generation(2000) == "centenial");
+	REQUIRE(get_generation(1990) == "millenial");
+	REQUIRE(get_generation(1975) == "generation x");
+	REQUIRE(get_generation(1960) == "baby boomer");
+	REQUIRE(get_generation(1940) == "silent generation");
+	REQUIRE(get_generation(1776) == "invalid");
 }
 TEST_CASE("test menu function")
 {
