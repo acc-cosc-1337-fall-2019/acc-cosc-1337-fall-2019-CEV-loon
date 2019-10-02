@@ -21,8 +21,8 @@ int main()
 		result = factoral(num1);
 		cout << "factoral " << result;
 	}
-	
-	    while (user_input == 'y')
+
+	while (user_input == 'y');
 	{
 		cout << "continue? y or n" << user_input;
 		cin >> user_input;
