@@ -10,3 +10,13 @@ returns 120
 
 DON'T FORGET TO WRITE TEST CASE.  See file loop_test.cpp
 */
+int factoral(num1)
+{
+	int fac = 1;
+	while (num1 >= 1)
+	{
+		fac = fac * num1;
+		--num1;
+	}
+
+}
