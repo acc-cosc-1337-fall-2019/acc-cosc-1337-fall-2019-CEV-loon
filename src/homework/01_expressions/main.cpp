@@ -1,17 +1,18 @@
 ﻿//write include statements
 #include "expressions.h"
-#include "expressions.ccp"
+#include<iostream>
+
 //write namespace using statement for cout
-using std::cout; using std::cin;
+using std::cout;
 
 /*
 Call multiply_numbers with 10 and 10 parameter values and display function result
 */
 int main()
 {
-	cout<< "enter numbers";
-	cin >> "num1";
-	cin >> "num2";
+	int result = multiply_numbers(10, 10);
+
+	cout << "Result is: " << result;
 
 	return 0;
 }

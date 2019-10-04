@@ -1,6 +1,16 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-#include "catch.hpp"
+//Write the include statement for types.h here
+#include "types.h"
+#include <iostream>
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
+//Write include for capturing input from keyboard and displaying output to screen
+using std::cout;
+
+int main() 
+{
+	int result = sum_numbers(5, 5);
+
+	cout << "Result: " << result;
+
+	return 0;
 }
+

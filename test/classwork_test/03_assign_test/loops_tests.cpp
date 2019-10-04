@@ -5,7 +5,4 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
-TEST_CASE("test")
-{
-	REQUIRE(factoral(5) == 120);
-}
+

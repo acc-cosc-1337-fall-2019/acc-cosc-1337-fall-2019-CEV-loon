@@ -1,5 +1,6 @@
-//write include statement for if_else header file
 #include "if_else.h"
+//write include statement for if_else header file
+
 //write code for function named get_generation that accepts an int year and returns
 //a string, apply the following logic:
 //return "Centenial" when year greater than equal to 1996 to 2014
@@ -13,26 +14,27 @@ string get_generation(int year)
 {
 	if (year >= 1996 && year <= 2014)
 	{
-		return "centenial";
+		return "Centenial";
 	}
 	else if (year >= 1977 && year <= 1995)
 	{
-		return "millenial";
+		return "Millenial";
 	}
-	else if (year>= 1946 && year<= 1964)
+	else if (year >= 1965 && year <= 1976)
 	{
-		return "baby boomer";
+		return "Generation X";
 	}
-	else if (year >= 1965 && year<=1976)
+	else if (year >= 1946 && year <= 1964)
 	{
-		return "generation x";
+		return "Baby Boomer";
 	}
-	else if (year>= 1925 && year <= 1945)
+	else if (year >= 1925 && year <= 1945)
 	{
-		return "silent generation";
+		return "Silent Generation";
 	}
+	else 
 	{
-		return "invalid";
+		return "Invalid";
 	}
-		return string();
+	
 }
