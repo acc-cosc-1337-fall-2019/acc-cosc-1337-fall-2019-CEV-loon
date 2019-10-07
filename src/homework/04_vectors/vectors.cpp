@@ -17,14 +17,7 @@ vector of int-parameter that returns the max value in a vector
 @return the max value in the vector
 */
 
-void loop_vector(const std::vector<int>& numbers)
-{
-	std::vector<int>numbers = { 8,4,20,88,66,99 };
 
-
-
-
-}
 
 /*
 Write a function named is_prime with an integer parameter that
@@ -45,3 +38,4 @@ Example given number 10 returns a vector with elements 2,3,5,7,
 Make sure to use the is_prime function to determine if current
 number is prime.
 */
+int vector_of_primes(int num);

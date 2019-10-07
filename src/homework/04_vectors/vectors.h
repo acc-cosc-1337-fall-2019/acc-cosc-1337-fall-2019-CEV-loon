@@ -27,6 +27,8 @@ thatgiven a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
+// decided to using questionable code !!!!!!!!!!!!
+// the idea is pirimes have a modulus when divided by 2 so this is a simple logic test to deturmine if a given number is prime or not
 void is_prime(int);
 {
 	if (int%2 = 0)
@@ -49,7 +51,7 @@ the number
 @return vector of ints containing prime values up to a value
 */
 
-void vector_of_primes(int)
+void vector_of_primes(int num);
 {
 	for (int i = 0; i < vector_of_primes.size(); ++i)
 	{

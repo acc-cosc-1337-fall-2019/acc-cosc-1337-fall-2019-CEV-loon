@@ -17,7 +17,7 @@ int main()
 	loop_vector(numbers);
 	std::cout << "enter a number";
 	std::cin >> "int" >> list_of_primes(int);
-	std::cout << 'list_of_primes(int)';
+	std::cout << "list_of_primes(int)"<< 'list_ofprimes' ;
 
 	return 0;
 }
