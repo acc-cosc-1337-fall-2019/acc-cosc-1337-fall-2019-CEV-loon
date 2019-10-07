@@ -4,6 +4,7 @@
 class ATM {
 
 public:
+	ATM();
 	void display_balance() const;
 
 
