@@ -9,13 +9,15 @@ Program continues until user decides to exit.
 */
 #include"vectors.h"
 
-int main() 
+int main()
 {
 	void loop_vector();
 	std::vector<int> numbers = { 8,4,20,88,66,99 };
 
-		loop_vector(numbers);
-
+	loop_vector(numbers);
+	std::cout << "enter a number";
+	std::cin >> "int" >> list_of_primes(int);
+	std::cout << "list_of_primes(int)"<< 'list_ofprimes' ;
 
 	return 0;
 }

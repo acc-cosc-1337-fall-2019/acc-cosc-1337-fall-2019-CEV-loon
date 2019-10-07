@@ -1,6 +1,6 @@
 #include "decisions.h"
 //write include statement for decisions header
-using std::cout;
+
 //Write code for function get_grade_points that accepts a string letter_grade and returns 
 //the grade_points for as follows:
 //given grade "A" returns 4
@@ -43,15 +43,11 @@ int get_grade_points(std::string letter_grade)
 //credit_hours. In the function account for division by zero by returning a -1.
 double calculate_gpa(int credit_hours, double credit_points)
 {
-	if (credit_hours > 0)
+	if (credit_points < 1) 
 	{
-		return (credit_points / credit_hours);
+		return -1;
 	}
-	else if (credit_hours == 0 true)
-	{
-		cout<< "you failed";
-		cout<< "your gpa is 0.0"
-		return 0;
-	}
+
+	return credit_points / credit_hours;
 }
 

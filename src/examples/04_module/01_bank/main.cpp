@@ -1,12 +1,22 @@
 #include<iostream>
-#include"atm.h"
-#include"bank_account.h"
-using std::cout
+#include<vector>
+#include "bank_account.h"
+
+using std::cout;
+using std::vector;
+
 int main()
 {
-	ATM atm;
-
-	atm.display_balance();
+	vector<BankAccount> accounts;
+	BankAccount b1;
 	
+	accounts.push_back(b1);
+	accounts.push_back(BankAccount(750));
+	
+	for (auto account : accounts)
+	{
+		cout << "Balance: " << account.get_balance() <<"\n";
+	}
+
 	return 0;
 }
