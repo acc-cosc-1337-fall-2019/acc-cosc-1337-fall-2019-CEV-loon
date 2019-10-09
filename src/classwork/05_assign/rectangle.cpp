@@ -16,8 +16,10 @@ void Rectanglee::calculate_area(int)
 
 }
 
-int Rectanglee::get_area()const
+int Rectanglee::get_area()
 {
 
 	return area;
 }
+
+

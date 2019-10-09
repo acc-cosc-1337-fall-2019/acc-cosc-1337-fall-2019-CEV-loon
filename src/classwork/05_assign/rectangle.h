@@ -8,8 +8,12 @@ class Rectanglee
  public:
 	 Rectanglee(int w, int h) : width(w), height(h) { calculate_area(); };
 	 
-	 int get_area()const;
-
+	 int get_area();
+	 std::ostream & operator << (std::ostream & out,  Rectnaglee & area)
+	 {
+		 out << Rectnaglee << Rectnaglee.area;
+		 return out;
+	 }
 private:
  void calculate_area();
 	 int area;
