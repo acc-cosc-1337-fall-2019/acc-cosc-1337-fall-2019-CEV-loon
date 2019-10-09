@@ -9,6 +9,14 @@ ATM::ATM() :account(1000) :
 
 }
 
+void ATM::deposit(int amount)
+{
+	account.deposit(amount);
+}
+void ATM::withdraw(int amount)
+{
+	account.withdraw(int amount);
+}
 void ATM::display_balance() const
 {
 	cout << "balance:" << account.get_balance();
