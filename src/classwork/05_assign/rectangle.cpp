@@ -9,17 +9,22 @@ has one public function area that returns the area of the rectangle, and one pri
 that calculates area of the rectangle.  The class has 3 int private variables area, width, and height.
 */
 
-void Rectanglee::calculate_area(int)
+void Rectanglee::calculate_area() 
 {
 	area = height * width;
-		return area;
-
+	
 }
 
 int Rectanglee::get_area()const
 {
-
 	return area;
 }
 
+
+
+std::ostream & operator<<(std::ostream & out, const Rectanglee & r)
+{
+	out << "Area: " << r.area << '\n';
+	return out;
+}
 
