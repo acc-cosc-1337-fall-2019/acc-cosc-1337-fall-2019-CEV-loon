@@ -17,4 +17,6 @@ ostream & operator<<(ostream & out, const customer& act)
 		out << act;
 	}
 	out << "/n total balance:" << c.total_balance;
+	return out;
 }
+
