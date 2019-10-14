@@ -1,5 +1,6 @@
 //write includes statements
 #include "loops.h"
+#include<iostream>
 //write using statements for cin and cout
 
 using std::cout; 
@@ -20,13 +21,12 @@ int main()
 		cin >> num1;
 		result = factoral(num1);
 		cout << "factoral " << result;
-	}
 
-	while (user_input == 'y');
-	{
 		cout << "continue? y or n" << user_input;
 		cin >> user_input;
 
-	}
+	} while (user_input == 'y');
+
+	
 	return 0;
 }

@@ -1,24 +1,24 @@
-//atm.cpp
+#include "atm.h"
 #include<iostream>
+//atm.cpp
 using std::cout;
 
-ATM::ATM() :account(1000) :
+ATM::ATM(BankAccount a) :account(a)
 {
-
-	//have class that gets balance from a datatbase
-
+		
 }
 
 void ATM::deposit(int amount)
 {
 	account.deposit(amount);
 }
+
 void ATM::withdraw(int amount)
 {
-	account.withdraw(int amount);
+	account.withdraw(amount);
 }
+
 void ATM::display_balance() const
 {
-	cout << "balance:" << account.get_balance();
-
+	cout << "Balance: " << account.get_balance();
 }

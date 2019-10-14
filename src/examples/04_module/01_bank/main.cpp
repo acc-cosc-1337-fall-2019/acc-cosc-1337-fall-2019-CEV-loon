@@ -1,23 +1,24 @@
 #include<iostream>
-//#include"atm.h"
-#include"bank_account.h"
+#include<vector>
+#include "atm.h"
+
 using std::cout; using std::vector;
+
 int main()
 {
-	bank_account a;
-	bank_account b = a;
-	a.balance; 
-	display(a);
-	std::vector<bank_acoount> accounts{ bank_account(500),bank_account(600)
-	bank_account(1000) };
+	BankAccount a;
+	BankAccount b = a;
 
+	//scan card and enter pin
+	//get customer records from db into a vector
+	vector<BankAccount> accounts{BankAccount(500), BankAccount(600),
+	BankAccount(1000)};
 
-
-	bank_account account;
 	ATM atm(accounts[0]);
 	atm.deposit(100);
 	atm.withdraw(50);
 	atm.display_balance();
-	// a; overload operator
+	//cout<<atm;
+
 	return 0;
 }
