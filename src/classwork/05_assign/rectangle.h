@@ -10,20 +10,15 @@ that calculates area of the rectangle.  The class has 3 int private variables ar
 class Rectanglee
 {
  public:
-	 rectanglee(int w, int h) : width(w), height(h) { calculate_area(); };
+	 Rectanglee(int w, int h) : width(w), height(h) { calculate_area(); };
 	 
 	 int get_area()const;
 	 friend std::ostream & operator << (std::ostream & out,
-		 const rectangle &area);
-	 std::ostream & operator << (std::ostream & out,  rectnaglee & area)
-	 {
-		 out << "area:" << rectnaglee.area;
-		 return out;
-	 }
-
+		 const Rectanglee &area);
+	 
 
 private:
- void calculate_area()const;
+	void calculate_area();
 	 int area;
 	 int width;
      int height;

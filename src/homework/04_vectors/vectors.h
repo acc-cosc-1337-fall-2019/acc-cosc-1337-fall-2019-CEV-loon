@@ -1,7 +1,6 @@
-#include<string>
 #include<vector>
 
-
+using std::vector;
 
 
 /*
@@ -12,13 +11,8 @@ const reference vector of ints parameter that returns an int
 */
 
 
-void get_max(const std::vector(int)& numbers);
+int get_max_from_vector(const std::vector<int>& numbers);
 
-for (int i = 0; i < numbers.size(); ++i)
-{
-
-
-}
 
 /*
 Write a function prototype named is_prime with an integer parameter
@@ -29,18 +23,7 @@ thatgiven a number returns true if prime or false if not prime
 
 // decided to using questionable code !!!!!!!!!!!!
 // the idea is pirimes have a modulus when divided by 2 so this is a simple logic test to deturmine if a given number is prime or not
-void is_prime(int);
-{
-	if (int%2 = 0)
-	{
-		return "true";
-	}
-	else if (int%2 != 0)
-	{
-		return "false";
-	}
-
-}
+bool is_prime(int);
 
 
 /*
@@ -51,15 +34,5 @@ the number
 @return vector of ints containing prime values up to a value
 */
 
-void vector_of_primes(int num);
-{
-	for (int i = 0; i < vector_of_primes.size(); ++i)
-	{
-		if (int%2 == 0)
-		{
-			std::cout << vector_of_primes[i] << "\n";
-		}
-		i = ++i
-	}
+vector<int> vector_of_primes(int num);
 
-}

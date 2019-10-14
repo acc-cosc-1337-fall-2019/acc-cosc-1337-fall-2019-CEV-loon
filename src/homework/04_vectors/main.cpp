@@ -1,3 +1,7 @@
+#include<iostream>
+
+using std::cout; using std::cin;
+
 /*
 use a vector of int with values 8, 4, 20, 88, 66, 99
 
@@ -11,13 +15,44 @@ Program continues until user decides to exit.
 
 int main()
 {
-	void loop_vector();
-	std::vector<int> numbers = { 8,4,20,88,66,99 };
+	vector<int> nums{ 8, 4, 20, 88, 66, 99 };
 
-	loop_vector(numbers);
-	std::cout << "enter a number";
-	std::cin >> "int" >> list_of_primes(int);
-	std::cout << "list_of_primes(int)"<< 'list_ofprimes' ;
+	auto res = 'y';
+	auto choice = 1;
+	auto number = 0;
+
+	do 
+	{
+		cout << "Enter 1 or 2: ";
+		cin >> choice;
+
+		if (choice == 1) 
+		{
+			int max = get_max_from_vector(nums);
+			cout << "Max in vector is : " << max <<"\n";
+		}
+		else if(choice == 2)
+		{
+			cout << "Enter a number: ";
+			cin >> number;
+			vector<int> primes = vector_of_primes(number);
+
+			cout << "Primes: ";
+			for (auto p : primes) 
+			{
+				cout << " "<<  p;
+			}
+			cout << "\n";
+		}
+		else 
+		{
+			cout << "Invalid choice \n: ";
+		}
+		
+		cout << "Continue y or n? ";
+		cin >> res;
+
+	} while (res == 'Y' || res == 'y');
 
 	return 0;
 }
