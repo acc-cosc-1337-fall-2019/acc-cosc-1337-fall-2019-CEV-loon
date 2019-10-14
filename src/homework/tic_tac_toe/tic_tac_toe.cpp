@@ -2,6 +2,10 @@
 #include"tic_tac_toe.h"
 bool tictactoe::game_over()
 {
+	if (check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
+	{
+		return true;
+	}
 	return false;
 }
 void tictactoe::start_game(string player)
@@ -11,7 +15,8 @@ void tictactoe::start_game(string player)
 }
 void tictactoe::mark_board(int position)
 {
-
+	pegs[position - 1] = next_player;
+	set_next_player();
 }
 string tictactoe::get_player() const
 {
@@ -37,17 +42,20 @@ void tictactoe::set_next_player()
 
 bool tictactoe::check_row_win()
 {
+	return false;
 }
 
 bool tictactoe::check_diagonal_win()
 {
+	return false;
 }
 
 bool tictactoe::check_columb_win()
 {
 	for (std::size_t i = 0; i < 3; i++)
 	{
-		if (pegs[i]) == pegs[i + 3] && pegs[i + 3] == pegs[i + 6])
+		if (pegs[i]) == pegs[i + 3] && pegs[i + 3] == pegs[i + 6]
+			&& pegs[1+6] != " ")
 		{
 		return true;
 }

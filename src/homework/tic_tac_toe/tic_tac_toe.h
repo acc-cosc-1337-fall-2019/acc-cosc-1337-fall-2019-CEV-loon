@@ -23,6 +23,6 @@ private:
 	bool check_diagonal_win();
 	void clear_bord();// for ranged or 
 	bool check_board_full();
-	vector<string> pegs(9, " ");
+	vector<string> pegs{9, " "};
 	string next_player;
 };
