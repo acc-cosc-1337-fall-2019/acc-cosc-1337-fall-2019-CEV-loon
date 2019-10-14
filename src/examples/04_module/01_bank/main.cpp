@@ -5,15 +5,17 @@
 using std::cout; using std::vector; using std::cin;
 int main()
 {
-
+	checkingaccount a;
+	cout << a.get_balance();
+	//checkingaccounta(1000);
 	customer customer;
 
-	customeraddaccount(bank_account(500))
+	/*customeraddaccount(bank_account(500))
 		customeraddaccount(bank_account(1500))
 		customeraddaccount(bank_account(5000))
 		cout << customer;
 	return 0;
-}
+}*/
 	bank_account b = a;
 	a.balance; 
 	display(a);
