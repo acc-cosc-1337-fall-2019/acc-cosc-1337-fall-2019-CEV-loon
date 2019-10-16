@@ -15,6 +15,7 @@ int main()
 	cout << a;
 
 	savings_account savings(500);
+	cout <<"/n"<< savings.get_balance(0)<<"/n";
 	savings.add_interest();
 	cout << savings;
 
