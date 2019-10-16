@@ -1,7 +1,8 @@
 //customer.h
 #include<vector>
-using std::cout;
-using std::<vector>;
+#include<iostream>
+using std::ostream;
+using std::vector;
 #include "bank_account.h"
 
 
