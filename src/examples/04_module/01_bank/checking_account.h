@@ -3,7 +3,7 @@
 
 
 
-class checking_account : public bank_account
+class checking_account : public BankAccount
 {
 public:
 

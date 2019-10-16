@@ -1,34 +1,43 @@
 #include<iostream>
 //#include"atm.h"
+#include"checking_account.h"
 #include"bank_account.h"
 #include"customer.h"
+#include<vector>
+#include"savings_account.h"
+#include "main.h"
 using std::cout; using std::vector; using std::cin;
 int main()
 {
-	checkingaccount a;
+	checking_account a(1500);
 	cout << a.get_balance();
-	//checkingaccounta(1000);
-	customer customer;
+	checking_account c= a+b(1000);
+	cout << a;
+
+	savings_account savings(500);
+	savings.add_interest();
+	cout<<savings
 
 	/*customeraddaccount(bank_account(500))
 		customeraddaccount(bank_account(1500))
 		customeraddaccount(bank_account(5000))
 		cout << customer;
 	return 0;
-}*/
-	bank_account b = a;
+}
+	BankAccount b = a;
 	a.balance; 
 	display(a);
-	std::vector<bank_acoount> accounts{ bank_account(500),bank_account(600)
-	bank_account(1000) };*/
+	std::vector<BankAccount> accounts{ BankAccount(500),BankAccount(600)
+	BankAccount(1000) };*/
 
 
 
-	bank_account account;
+	//bank_account account;
 	/*ATM atm(accounts[0]);
 	atm.deposit(100);
 	atm.withdraw(50);
 	atm.display_balance();
 	 a; overload operator*/
+	
 	return 0;
 }
