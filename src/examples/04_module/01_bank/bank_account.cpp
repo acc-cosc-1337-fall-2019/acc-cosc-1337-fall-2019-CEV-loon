@@ -26,3 +26,10 @@ int BankAccount::get_balance() const
 {
 	return balance;
 }
+
+BankAccount BankAccount::operator+(const BankAccount & b)
+{
+	BankAccount account
+	account.balance = balance + b.balance;
+	return BankAccount();
+}

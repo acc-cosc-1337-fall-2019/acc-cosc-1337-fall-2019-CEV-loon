@@ -16,7 +16,11 @@ int main()
 
 	savings_account savings(500);
 	savings.add_interest();
-	cout<<savings
+	cout << savings;
+
+
+	BankAccount c = a + savings;
+	cout << c;
 
 	/*customeraddaccount(bank_account(500))
 		customeraddaccount(bank_account(1500))

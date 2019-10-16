@@ -21,6 +21,7 @@ public:
 		const BankAccount & b);
 
 	friend std::istream & operator >> (std::istream & in, BankAccount & b);
+	BankAccount operator+(const BankAccount& b);
 protected:
 	int balance;
 	
