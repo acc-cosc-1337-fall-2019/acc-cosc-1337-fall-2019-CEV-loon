@@ -1,25 +1,23 @@
 #include "customer.h"
-#include<vector>
-#include<iostream>
-#include "bank_account.h"
+
 //customer.cpp
 
-void customer::add_account(BankAccount act)
+void Customer::add_account(BankAccount act)
 {
-	
 	total_balance += act.get_balance();
-	account.push_back(act);
-
+	accounts.push_back(act);
 }
 
-ostream & operator<<(ostream & out, const customer& act)
+ostream& operator<<(ostream& out, const Customer&  c) 
 {
-	out<< "customer accounts: /n";
-	for (auto act : c.accounts)
+	out << "Customer accounts: \n";
+
+	for (auto act : c.accounts) 
 	{
 		out << act;
 	}
-	out << "/n total balance:" << c.total_balance;
+
+	out<<"\n Total Balance: " << c.total_balance;
+
 	return out;
 }
-

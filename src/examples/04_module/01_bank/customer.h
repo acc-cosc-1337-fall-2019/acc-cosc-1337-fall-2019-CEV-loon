@@ -1,27 +1,19 @@
 //customer.h
-#include<vector>
 #include<iostream>
-using std::ostream;
-using std::vector;
+#include<vector>
 #include "bank_account.h"
 
+using std::vector;
+using std::ostream;
 
-
-
-
-
-class customer
+class Customer 
 {
 public:
-		void add_account(BankAccount act);
+	void add_account(BankAccount act);
 	friend ostream& operator<<(ostream& out,
-		const customer& c);
-
-
+		const Customer&  c);
 
 private:
-		vector<customer> accounts;
-		int total_balance{ 0 };
-
-
+	vector<BankAccount> accounts;
+	int total_balance{ 0 };
 };
