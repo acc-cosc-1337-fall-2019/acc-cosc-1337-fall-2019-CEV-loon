@@ -29,7 +29,7 @@ int BankAccount::get_balance() const
 
 BankAccount BankAccount::operator+(const BankAccount & b)
 {
-	BankAccount account
+	BankAccount account;
 	account.balance = balance + b.balance;
 	return BankAccount();
 }

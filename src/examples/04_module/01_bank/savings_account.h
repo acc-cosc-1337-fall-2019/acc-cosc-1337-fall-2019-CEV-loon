@@ -8,7 +8,7 @@ public:
 	void add_intrest();
 
 private:
-	const float interest_rate:
+	const float interest_rate;
 	const float time = 1.0 / 12.0;
 
 

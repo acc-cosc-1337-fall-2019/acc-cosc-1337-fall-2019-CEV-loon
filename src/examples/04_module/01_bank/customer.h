@@ -12,14 +12,14 @@ using std::vector;
 
 class customer
 {
-	public
-		void add_account(bank_account act);
+public:
+		void add_account(BankAccount act);
 	friend ostream& operator<<(ostream& out,
 		const customer& c);
 
 
 
-		private
+private:
 		vector<customer> accounts;
 		int total_balance{ 0 };
 
