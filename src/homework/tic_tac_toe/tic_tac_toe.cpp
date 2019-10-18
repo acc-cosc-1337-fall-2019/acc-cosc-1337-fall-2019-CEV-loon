@@ -30,12 +30,12 @@ void tictactoe::display_board() const
 {
 	//iterate vector and display to screen
 
-	/*std::cout << "vector<string>", pegs{ 0 } << "|" << vector<string>, pegs{ 1 } << "|" << vector<string>, pegs{ 2 } << "/n"
+	std::cout << "vector<string>", pegs{ 0 } << "|" << vector<string>, pegs{ 1 } << "|" << vector<string>, pegs{ 2 } << "/n"
 		<< "_____" << "/n"
 		"vector<string>", pegs{ 3 } << "|" << vector<string>, pegs{ 4 } << "|" << vector<string>, pegs{ 5 } << "/n"
 		<< "_____" << "/n"
 		"vector<string>", pegs{ 6 } << "|" << vector<string>, pegs{ 7 } << "|" << vector<string>, pegs{ 8 } << "/n"
-		<<*/
+		<< ;
 
 }
 //define function
@@ -54,13 +54,38 @@ void tictactoe::set_next_player()
 
 bool tictactoe::check_row_win()
 {
+	for (std::size_t i = 0; i < 3; i++)
+	{
+		if (pegs[i]) == pegs[i + 0] && pegs[i + 1] == pegs[i + 2]
+			&& pegs[1 + 2] != " ")
+			; {
+			return true;
+		}
+	}
 	return false;
 }
 
 bool tictactoe::check_diagonal_win()
 {
+	for (std::size_t i = 0; i < 3; i++)
+	{
+		if (pegs[i]) == pegs[i + 0] && pegs[i + 4] == pegs[i + 9]
+			&& pegs[1 + 9] != " ")
+			; {
+			return true;
+		}
+	}
 	return false;
 }
+for (std::size_t i = 0; i < 3; i++)
+{
+	if (pegs[i]) == pegs[i + 2] && pegs[i + 4] == pegs[i + 6]
+		&& pegs[1 + 6] != " ")
+		; {
+		return true;
+	}
+}
+return false;
 
 bool tictactoe::check_columb_win()
 {
@@ -76,9 +101,16 @@ bool tictactoe::check_columb_win()
 }
 void tictactoe::clear_board()
 {
+	pegs.clear(" ");
 }
 
 bool tictactoe::check_board_full()
 {
-	return false;
+	for (vector<string> pegs{}, i = 0,i<9, i++)
+	{
+		if (vector<string> pegs{i}== " ");
+		return false;
+
+	}
+	return true;
 }
