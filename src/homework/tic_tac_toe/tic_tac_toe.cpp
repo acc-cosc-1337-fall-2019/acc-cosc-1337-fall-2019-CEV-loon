@@ -56,14 +56,32 @@ bool tictactoe::check_row_win()
 {
 	for (std::size_t i = 0; i < 3; i++)
 	{
-		if (pegs[i]) == pegs[i + 0] && pegs[i + 1] == pegs[i + 2]
-			&& pegs[1 + 2] != " ")
+		if (pegs[i]) == pegs[i + 1] && pegs[i + 2] == pegs[i + 3]
+			&& pegs[i + 8] != " ")
 			; {
 			return true;
 		}
 	}
 	return false;
 }
+for (std::size_t i = 0; i < 3; i++)
+{
+	if (pegs[i]) == pegs[i + 4] && pegs[i + 5] == pegs[i + 6]
+		&& pegs[i + 2] != " ")
+		; {
+		return true;
+	}
+}
+return false;
+for (std::size_t i = 0; i < 3; i++)
+{
+	if (pegs[i]) == pegs[i + 7] && pegs[i + 8] == pegs[i + 9]
+		&& pegs[i + 2] != " ")
+		; {
+		return true;
+	}
+}
+return false;
 
 bool tictactoe::check_diagonal_win()
 {
@@ -91,14 +109,37 @@ bool tictactoe::check_columb_win()
 {
 	for (std::size_t i = 0; i < 3; i++)
 	{
-		if (pegs[i]) == pegs[i + 3] && pegs[i + 3] == pegs[i + 6]
-			&& pegs[1 + 6] != " ")
+		if (pegs[i]) == pegs[i + 3] && pegs[i + 6] == pegs[i + 9]
+			&& pegs[i + 7] != " ")
 			; {
 		return true;
 }
 	}
 	return false;
 }
+{
+	for (std::size_t i = 0; i < 3; i++)
+	{
+		if (pegs[i]) == pegs[i + 2] && pegs[i + 5] == pegs[i + 8]
+			&& pegs[i + 4] != " ")
+			; {
+			return true;
+		}
+	}
+	return false;
+}
+{
+	for (std::size_t i = 0; i < 3; i++)
+	{
+		if (pegs[i]) == pegs[i +1] && pegs[i + 4] == pegs[i + 7]
+			&& pegs[i + 6] != " ")
+			; {
+			return true;
+		}
+	}
+	return false;
+}
+
 void tictactoe::clear_board()
 {
 	pegs.clear(" ");
