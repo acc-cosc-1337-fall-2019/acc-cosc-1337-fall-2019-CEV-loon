@@ -21,7 +21,7 @@ private:
 	bool check_columb_win();
 	bool check_row_win();
 	bool check_diagonal_win();
-	void clear_bord();// for ranged or 
+	void clear_board();// for ranged or 
 	bool check_board_full();
 	vector<string> pegs{9, " "};
 	string next_player;

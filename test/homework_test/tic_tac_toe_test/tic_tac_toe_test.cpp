@@ -14,7 +14,7 @@ TEST_CASE("Test win by first column", "[X wins first column]")
   First column win are user positions 1,4, and 7
   vector view: 0, 3, and 6
   */
-	TicTacToe board;
+	tictactoe board;
 	board.start_game("X");
 	REQUIRE(board.game_over() == false);
 	board.mark_board(1);//X         
