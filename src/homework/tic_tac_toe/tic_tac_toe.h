@@ -1,13 +1,13 @@
-//h
-//represents one game
-#include<vector>
 #include<string>
-#include<iostream>
-
+#include<vector>
 
 using std::string; using std::vector;
 
-class tictactoe
+//h
+/*
+Represents one game of tic tac toe.
+*/
+class TicTacToe 
 {
 public:
 	bool game_over();
@@ -18,11 +18,11 @@ public:
 
 private:
 	void set_next_player();
-	bool check_columb_win();
+	bool check_column_win();
 	bool check_row_win();
 	bool check_diagonal_win();
-	void clear_board();// for ranged or 
+	void clear_board();
 	bool check_board_full();
-	vector<string> pegs{9, " "};
+	vector<string> pegs{ 9, " " };//initializer
 	string next_player;
 };

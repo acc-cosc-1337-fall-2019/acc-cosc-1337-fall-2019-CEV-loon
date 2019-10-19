@@ -1,157 +1,116 @@
 //cpp
 #include<iostream>
-#include<vector>
-#include<string>
+#include "tic_tac_toe.h"
+
 using std::cout;
-#include"tic_tac_toe.h"
-bool tictactoe::game_over()
+
+bool TicTacToe::game_over()
 {
-	if (check_columb_win() || check_row_win() || check_diagonal_win() || check_board_full())
+	if (check_column_win() || check_row_win() ||
+		check_diagonal_win() || check_board_full()) 
 	{
 		return true;
 	}
+
 	return false;
 }
-void tictactoe::start_game(string player)
+
+void TicTacToe::start_game(string player)
 {
 	next_player = player;
 	clear_board();
 }
-void tictactoe::mark_board(int position)
+
+/*
+Remember position is what user sees.
+When you save position to vector subtract 1 from position
+*/
+void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
 	set_next_player();
 }
-string tictactoe::get_player() const
+
+string TicTacToe::get_player() const
 {
 	return next_player;
 }
-void tictactoe::display_board() const
+
+void TicTacToe::display_board() const
 {
-	//iterate vector and display to screen
-
-	std::cout << "vector<string>", pegs{ 0 } << "|" << vector<string>, pegs{ 1 } << "|" << vector<string>, pegs{ 2 } << "/n"
-		<< "_____" << "/n"
-		"vector<string>", pegs{ 3 } << "|" << vector<string>, pegs{ 4 } << "|" << vector<string>, pegs{ 5 } << "/n"
-		<< "_____" << "/n"
-		"vector<string>", pegs{ 6 } << "|" << vector<string>, pegs{ 7 } << "|" << vector<string>, pegs{ 8 } << "/n"
-		<< ;
-
-}
-//define function
-void tictactoe::set_next_player()
-{
-	if (next_player == "x")
+	for (std::size_t i = 0; i < 9; i += 3)
 	{
-		next_player = "o";
+		cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2]<<'\n';
 	}
-	else
-	{
-		next_player = "x";
-	}
-
 }
 
-bool tictactoe::check_row_win()
+void TicTacToe::set_next_player()
 {
-	for (std::size_t i = 0; i < 3; i++)
+	if (next_player == "X") 
 	{
-		if (pegs[i]) == pegs[i + 1] && pegs[i + 2] == pegs[i + 3]
-			&& pegs[i + 8] != " ")
-			; {
-			return true;
-		}
+		next_player = "O";
 	}
-	return false;
-}
-for (std::size_t i = 0; i < 3; i++)
-{
-	if (pegs[i]) == pegs[i + 4] && pegs[i + 5] == pegs[i + 6]
-		&& pegs[i + 2] != " ")
-		; {
-		return true;
+	else 
+	{
+		next_player = "X";
 	}
 }
-return false;
-for (std::size_t i = 0; i < 3; i++)
-{
-	if (pegs[i]) == pegs[i + 7] && pegs[i + 8] == pegs[i + 9]
-		&& pegs[i + 2] != " ")
-		; {
-		return true;
-	}
-}
-return false;
 
-bool tictactoe::check_diagonal_win()
+bool TicTacToe::check_column_win()
 {
-	for (std::size_t i = 0; i < 3; i++)
+	for (std::size_t i = 0; i < 3; i++) 
 	{
-		if (pegs[i]) == pegs[i + 0] && pegs[i + 4] == pegs[i + 9]
-			&& pegs[1 + 9] != " ")
-			; {
-			return true;
-		}
-	}
-	return false;
-}
-for (std::size_t i = 0; i < 3; i++)
-{
-	if (pegs[i]) == pegs[i + 2] && pegs[i + 4] == pegs[i + 6]
-		&& pegs[1 + 6] != " ")
-		; {
-		return true;
-	}
-}
-return false;
-
-bool tictactoe::check_columb_win()
-{
-	for (std::size_t i = 0; i < 3; i++)
-	{
-		if (pegs[i]) == pegs[i + 3] && pegs[i + 6] == pegs[i + 9]
-			&& pegs[i + 7] != " ")
-			; {
-		return true;
-}
-	}
-	return false;
-}
-{
-	for (std::size_t i = 0; i < 3; i++)
-	{
-		if (pegs[i]) == pegs[i + 2] && pegs[i + 5] == pegs[i + 8]
-			&& pegs[i + 4] != " ")
-			; {
-			return true;
-		}
-	}
-	return false;
-}
-{
-	for (std::size_t i = 0; i < 3; i++)
-	{
-		if (pegs[i]) == pegs[i +1] && pegs[i + 4] == pegs[i + 7]
+		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6]
 			&& pegs[i + 6] != " ")
-			; {
+		{
 			return true;
 		}
 	}
+
 	return false;
 }
 
-void tictactoe::clear_board()
+bool TicTacToe::check_row_win()
 {
-	pegs.clear(" ");
+	for (std::size_t i = 0; i < 9; i += 3) 
+	{
+		if(pegs[i] == pegs[i+1] && pegs [i+1] == pegs[i+2] && pegs[i] != " ")
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
-bool tictactoe::check_board_full()
+bool TicTacToe::check_diagonal_win()
 {
-	for (vector<string> pegs{}, i = 0,i<9, i++)
+	if(pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[0] != " " ||
+	   pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[2] != " ")
 	{
-		if (vector<string> pegs{i}== " ");
-		return false;
-
+		return true;
 	}
+
+	return false;
+}
+
+void TicTacToe::clear_board()
+{
+	for(auto& peg: pegs)
+	{
+		peg = " ";
+	}
+}
+
+bool TicTacToe::check_board_full()
+{
+	for(auto peg: pegs)
+	{
+		if(peg == " ")
+		{
+			return false;
+		}
+	}
+
 	return true;
 }
