@@ -5,7 +5,7 @@ class CheckingAccount : public BankAccount
 {
 public:
 
-	CheckingAccount(int bal) : BankAccount(bal) {}
+	CheckingAccount(int bal) : BankAccount(bal) {};
 	int get_balance()const;
 private:
 };
