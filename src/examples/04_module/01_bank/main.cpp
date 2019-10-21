@@ -5,20 +5,19 @@
 #include"bank_account.h"
 
 using std::cout; using std::vector; using std::cin;
+using std::reference_wrapper;
 
 int main()
 {	
-	CheckingAccount a(1500);
-	cout << "\n cheching account get balance" << checking.get_balance() << "\n";
+	checkingaccount c(1500) ;
+	SavingsAccount s(500);
+	vector <reference_wrapper<BankAccount> accounts{ c,s };
 
-	SavingsAccount savings(500);
-	//cout<<"Calls bank account overload ostream" << savings;
-	cout<<"\n Savings get_balance" << savings.get_balance()<<"\n";
-	savings.add_interest();
-	cout << savings;
+	for (auto act : accounts)
+	{
+		cout << "balance:" << act.get().get_balance() << "/n";
 
-	BankAccount& account = savings;
-	cout << "\n reference to savings get_balance:" << account.get_balance() << "\n";
-	// page 7 examples in blackboard
+	}
+	
 	return 0;
 }
