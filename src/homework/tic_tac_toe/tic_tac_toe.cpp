@@ -7,10 +7,17 @@ using std::cout;
 bool TicTacToe::game_over()
 {
 	if (check_column_win() || check_row_win() ||
-		check_diagonal_win() || check_board_full()) 
+		check_diagonal_win()) 
 	{
+		set_winner();
 		return true;
 	}
+	else if(check_board_full())
+		{
+		  
+		    winner = "c";
+			return true;
+		})
 
 	return false;
 }
@@ -28,13 +35,22 @@ When you save position to vector subtract 1 from position
 void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
-	set_next_player();
+	if (game_over() == false);
+	{
+		set_next_player();
+	}
 }
 
 string TicTacToe::get_player() const
 {
 	return next_player;
 }
+
+string TicTacToe::get_winner() const
+{
+	return winner;
+}
+
 
 ostream& operator<<(ostream& out, const TicTacToe& t)
 {
@@ -127,4 +143,17 @@ bool TicTacToe::check_board_full()
 	}
 
 	return true;
+}
+
+void TicTacToe::set_winner()
+{
+	if(check_board_full())
+	if (next_player == "x")
+	{
+		winner = "o";
+	}
+	else
+	{
+		winner = "x";
+	}
 }
