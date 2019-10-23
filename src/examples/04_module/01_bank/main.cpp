@@ -11,7 +11,7 @@ int main()
 {	
 	checkingaccount c(1500) ;
 	SavingsAccount s(500);
-	vector <reference_wrapper<BankAccount> accounts{ c,s };
+	vector <reference_wrapper<BankAccount> accounts { c,s };
 
 	for (auto act : accounts)
 	{

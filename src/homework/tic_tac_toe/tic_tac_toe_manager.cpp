@@ -1,8 +1,8 @@
 //cpp
 #include "tic_tac_toe_manager.h"
+#include<ostream>
 
-
-&ostream operator<<(ostream & out, const TicTacToeManager & m)
+& ostream operator <<(ostream & out, const TicTacToeManager & m)
 {
 	for (auto game : m.games)
 	{
@@ -23,7 +23,7 @@ void TicTacToeManager::update_winner_count(string winner)
 { 
 	if (winner == "x")
 	{
-		x_winn++;
+		x_win++;
 	}
 	else if (winner == "o")
 	{

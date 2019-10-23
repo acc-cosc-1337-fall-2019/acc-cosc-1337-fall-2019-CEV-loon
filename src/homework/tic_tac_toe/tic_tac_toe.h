@@ -33,7 +33,7 @@ private:
 	vector<string> pegs{ 9, " " };//initializer
 	string next_player;
 	void set_winner();
-	void winner;
+	void winner();
 
 };
 #endif

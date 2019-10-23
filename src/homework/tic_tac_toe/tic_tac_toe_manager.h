@@ -4,13 +4,14 @@
 #include<vector>
 #include<iostream>
 #include "tic_tac_toe.h"
-using std::vector ,using std:ostream;
+using std::vector;
+using std::ostream;
 
 class TicTacToeManager
 {
 public:
-	void save_game(const TicTacToe game;
-	friend & ostream operator<<(ostream & out, const TicTacToeManager & m );
+	void save_game(const TicTacToe game);
+	friend & ostream operator <<(ostream & out, const TicTacToeManager & m );
 
 private:
 	vector<TicTacToe> games;
@@ -20,3 +21,4 @@ private:
 	void update_winner_count(string winner);
 
 };
+#endif
