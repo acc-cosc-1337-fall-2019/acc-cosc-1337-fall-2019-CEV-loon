@@ -15,9 +15,9 @@ bool TicTacToe::game_over()
 	else if(check_board_full())
 		{
 		  
-		    winner = "c";
+		    winner() = "c";
 			return true;
-		})
+		}
 
 	return false;
 }
@@ -47,7 +47,7 @@ string TicTacToe::get_player() const
 
 string TicTacToe::get_winner() const
 {
-	return winner;
+	return winner();
 }
 
 
@@ -149,10 +149,10 @@ void TicTacToe::set_winner()
 	if(check_board_full())
 	if (next_player == "x")
 	{
-		winner = "o";
+		winner() = "o";
 	}
 	else
 	{
-		winner = "x";
+		winner() = "x";
 	}
 }

@@ -20,7 +20,7 @@ public:
 	void mark_board(int position);
 	string get_player() const;
 	string get_winner()const;
-	friend ostream& operator<<(ostream& out, const TicTacToe& t);
+	friend ostream& operator<<(ostream & out, const TicTacToe& t);
 	friend istream& operator>>(istream& in, TicTacToe& t);
 
 private:
@@ -32,8 +32,8 @@ private:
 	bool check_board_full();
 	vector<string> pegs{ 9, " " };//initializer
 	string next_player;
-	void set_winner();
-	void winner();
+	string set_winner();
+	string winner();
 
 };
 #endif

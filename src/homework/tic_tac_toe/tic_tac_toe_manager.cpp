@@ -2,7 +2,7 @@
 #include "tic_tac_toe_manager.h"
 #include<ostream>
 
-& ostream operator <<(ostream & out, const TicTacToeManager & m)
+ostream& operator<<(ostream & out, const TicTacToeManager & m)
 {
 	for (auto game : m.games)
 	{
@@ -16,6 +16,7 @@
 
 void TicTacToeManager::save_game(const TicTacToe game) 
 {
+	update_winner_count(game.get_winner());
 	games.push_back(game);
 }
 
