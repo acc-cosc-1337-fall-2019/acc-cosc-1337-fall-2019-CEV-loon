@@ -35,10 +35,9 @@ When you save position to vector subtract 1 from position
 void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
-	if (game_over() == false);
-	{
+	
 		set_next_player();
-	}
+	
 }
 
 string TicTacToe::get_player() const
