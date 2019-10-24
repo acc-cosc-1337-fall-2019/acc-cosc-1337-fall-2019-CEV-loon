@@ -8,8 +8,8 @@ ostream& operator<<(ostream & out, const TicTacToeManager & m)
 	{
 		out << game << "\n";
 	}
-	out << "x wins:" << m.x_wins << "\n";
-	out << "o wins:" << m.o_wins << "\n";
+	out << "x wins:" << m.x_win << "\n";
+	out << "o wins:" << m.o_win << "\n";
 	out << "CAT:" << m.ties << "\n";
 	return out;
 };
