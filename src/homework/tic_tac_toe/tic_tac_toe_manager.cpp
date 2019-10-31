@@ -24,14 +24,14 @@ void TicTacToeManager::update_winner_count(string winner)
 { 
 	if (winner == "x")
 	{
-		x_win++;
+		++x_win;
 	}
 	else if (winner == "o")
 	{
-	 o_win++;
+	 ++o_win;
 	}
 	else
 	{
-	 ties++;
+	 ++ties;
 	}
 }

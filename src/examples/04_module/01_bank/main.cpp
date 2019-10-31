@@ -9,7 +9,12 @@ using std::reference_wrapper;
 
 int main()
 {	
-	checkingaccount c(1500) ;
+	
+	
+	return 0;
+}
+
+/*checkingaccount c(1500) ;
 	SavingsAccount s(500);
 	vector <reference_wrapper<BankAccount> accounts { c,s };
 
@@ -17,7 +22,4 @@ int main()
 	{
 		cout << "balance:" << act.get().get_balance() << "/n";
 
-	}
-	
-	return 0;
-}
+	}*/
