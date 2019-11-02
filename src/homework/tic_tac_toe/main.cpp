@@ -5,11 +5,11 @@
 #include"tic_tac_toe_3.h"
 #include"tic_tac_toe_4.h"
 using std::cout; using std::cin; using std::string;
-
+using std::reference_wrapper;
 int main() 
 {
 	char cont = 'y';
-	TicTacToeManager manager;
+	TicTacToe manager;
 	
 	string player;
 	int game_type;
@@ -17,7 +17,7 @@ int main()
 	{
 		cout << "play 3 or 4";
 		cin >> game_type;
-		TicTacToe* game;
+		vector<reference_wrapper<TicTacToe>> game;
 		if (game_type == 3)
 		{
 			game = new TicTacToe3();
