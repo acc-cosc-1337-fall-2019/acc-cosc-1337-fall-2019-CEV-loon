@@ -1,5 +1,6 @@
 #include "tic_tac_toe_3.h"
 
+
 /*
 class function check_column_win
 Win by column if and return true if
@@ -9,8 +10,7 @@ Win by column if and return true if
 else
 false
 */
-
-bool TicTacToe::check_column_win()
+bool TicTacToe3::check_column_win()
 {
 	for (std::size_t i = 0; i < 3; i++)
 	{
@@ -20,9 +20,9 @@ bool TicTacToe::check_column_win()
 			return true;
 		}
 	}
-	
 	return false;
 }
+
 
 /*
 class function check_row_win
@@ -31,19 +31,18 @@ Win by row if
 3,4,5 are equal
 6,7,8 are equal
 */
-
-bool TicTacToe::check_row_win()
+bool TicTacToe3::check_row_win()
 {
-	for (std::size_t i = 0; i < 9; i += 3)
+	if (pegs[0] == pegs[1] && pegs[1] == pegs[2]
+		&& pegs[2] != " " || pegs[3] == pegs[4] && pegs[4] == pegs[5]
+		&& pegs[5] != " " || pegs[6] == pegs[7] && pegs[7] == pegs[8]
+		&& pegs[8] != " ")
 	{
-		if (pegs[i] == pegs[i + 1] && pegs[i + 1] == pegs[i + 2] && pegs[i] != " ")
-		{
-			return true;
-		}
+		return true;
 	}
-	
 	return false;
 }
+
 
 /*
 class function check_diagonal_win
@@ -53,13 +52,14 @@ Win diagonally
 6 7 8
 
 */
-bool TicTacToe::check_diagonal_win()
+
+bool TicTacToe3::check_diagonal_win()
 {
-	if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[0] != " " ||
-		pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[2] != " ")
+	if (pegs[0] == pegs[4] && pegs[4] == pegs[8]
+		&& pegs[8] != " " || pegs[2] == pegs[4] && pegs[4] == pegs[6]
+		&& pegs[6] != " ")
 	{
 		return true;
-	}*/
-
+	}
 	return false;
 }
