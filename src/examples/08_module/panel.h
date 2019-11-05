@@ -8,8 +8,7 @@ class Panel : public wxPanel
 public:
 	Panel(wxWindow * parent);
 private:
-	void OnDisplay(
-		wxCommandEvent & event);
+	void OnDisplay(wxCommandEvent & event);
 	wxTextCtrl * m_nameEntry;
 	wxRadioBox * radio_box;
 
