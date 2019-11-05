@@ -35,9 +35,9 @@ private:
 	void clear_board();
 	bool check_board_full();
 	
-	string next_player;
+	string next_player();
 	string set_winner();
-	string winner();
+	//string winner();
 
 };
 #endif
