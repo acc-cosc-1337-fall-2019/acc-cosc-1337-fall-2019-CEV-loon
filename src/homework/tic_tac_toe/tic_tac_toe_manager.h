@@ -14,7 +14,10 @@ using std::vector;
 class TicTacToeManager
 {
 public:
+	const std::vector<std::unique_ptr<TicTacToeBoard>>& get_games();
 	void save_game(unique_ptr<TicTacToe>& game);
+	void get_winner_totals(int& x, int& o, int& c);
+	std::unique_ptr <TicTacToe> get_GAME(int Game_type);
 	friend ostream& operator<<(ostream& out, const TicTacToeManager& m);
 private:
 	void update_winner_count(string winner);
