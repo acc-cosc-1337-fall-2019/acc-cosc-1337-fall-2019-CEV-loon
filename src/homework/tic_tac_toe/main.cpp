@@ -50,6 +50,6 @@ int main()
 	} while (cont == 'y' || cont == 'Y');
 
 	cout << "History: \n";
-	cout << manager;
+	cout << *manager;
 	return 0;
 }

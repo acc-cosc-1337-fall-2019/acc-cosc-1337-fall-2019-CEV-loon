@@ -13,8 +13,8 @@ Class Constructor
 Panel::Panel(wxWindow* parent)
 	: wxPanel(parent, -1)
 {
-	//1. Create unique pointer of TicTacToeManager
-	manager = std::make_unique<Tic_Tac_Toe_manager>();
+	//1. Create unique pointer instance of TicTacToeManager
+	manager = std::make_unique<TicTacToeManager>();
 
 	auto vbox = new wxBoxSizer(wxVERTICAL);
 	auto top_horizontal_box = get_top_box_sizer();
@@ -30,13 +30,11 @@ Panel::Panel(wxWindow* parent)
 	Using auto& for loop, loop through each game and call the history list box Append
 	function to add the string Game to it --> "Game"*/
 	const vector<unique_ptr<TicTacToe>>& games = manager->get_games();
+
 	for (auto& game : games)
 	{
-		history_list_box->Append("game")
-
-
+		history_list_box->Append("Game");
 	}
-
 
 	vbox->Add(top_horizontal_box, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
 	vbox->Add(mid_horizontal_box, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
@@ -82,7 +80,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 
 	wxGridSizer* sizer;
 
-	if (9 == 9)
+	if (board->get_pegs().size() == 9)
 	{
 		sizer = tic_tac_toe_grid_3;
 		tic_tac_toe_grid_4->Show(false);
@@ -101,7 +99,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	{	//call board get_pegs[i-1]  DONE
 
 		//STUDENT ACTION REQUIRED: REMOVE COMMENTS TO RUN STATEMENT BELOW
-		//item->GetWindow()->SetLabel(board->get_pegs()[i - 1]);
+		item->GetWindow()->SetLabel(board->get_pegs()[i - 1]);
 		item->GetWindow()->Disable();
 		i++;
 	}
@@ -109,7 +107,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	/*STUDENT MUST WRITE CODE FOR THIS
 	5)Call the winner_text SetValue function and pass the board get_winner() return value
 	as its parameter argument*/
-	winner_text->SetValue(board->getwinner());
+	winner_text->SetValue(board->get_winner());
 
 	set_winner_labels();
 	this->Layout();
@@ -144,7 +142,7 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		pass 3,4, or if you have my solution the values GameType::three or GameType::four
 		as parameter arguments to the get_game function
 		*/
-		board = manager->get_games(3);
+		board = manager->get_game(3);
 
 		tic_tac_toe_grid_4->Show(false);
 		tic_tac_toe_grid_3->Show(true);
@@ -159,7 +157,7 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		pass 3,4, or if you have my solution the values GameType::three or GameType::four
 		as parameter arguments to the get_game function
 		*/
-		board = manager->get_games(4);
+		board = manager->get_game(4);
 
 
 		tic_tac_toe_grid_3->Show(false);
@@ -171,16 +169,15 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		to determine whether X or O goes first.
 	   if radio button selection 0 call the board start game function with X or O
 	*/
-	if (first_player_radio->GetSelection() == 0
+	if (first_player_radio->GetSelection() == 0)
 	{
-		board->start_game("x");
+		board->start_game("X");
+	}
+	else
+	{
+		board->start_game("O");
+	}
 
-	}
-	else 
-	{
-		board->start_game("o");
-	}
-	
 
 	auto btn = dynamic_cast<wxButton*>(event.GetEventObject());
 	btn->Disable();
@@ -255,11 +252,9 @@ void Panel::set_winner_labels()
 	Remove comments below to properly set labels
 	*/
 
-	
 	x_winner_label->SetValue(std::to_string(x));
 	o_winner_label->SetValue(std::to_string(o));
 	c_winner_label->SetValue(std::to_string(c));
-	
 
 	this->Layout();
 }
