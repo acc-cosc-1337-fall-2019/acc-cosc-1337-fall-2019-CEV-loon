@@ -7,6 +7,7 @@
 #include "text.h"
 #include "circle.h"
 #include "rectangle.h"
+#include ".../scr/examples/10_module/01_shape/circle.h"
 
 class Panel : public wxPanel 
 {

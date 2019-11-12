@@ -2,6 +2,7 @@
 #define TEXT_H
 #include<wx/wx.h>
 #include "shape.h"
+#include ".../scr/examples/10_module/01_shape/shapes.h"
 #include "point.h"
 
 using std::string;
