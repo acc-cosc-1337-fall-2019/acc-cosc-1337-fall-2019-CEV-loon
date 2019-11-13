@@ -1,15 +1,15 @@
 //line.h
-#IFNDEF SHAPE_H
-#DEFINE SHAPE_H
-#include "shape.h"
+#ifndef LINE_H
+#define  LINE_H
+#include"../07_module/shape.h"
 
-class shape
+namespace mod7ex
 {
-public:
-	virtual void draw() = 0 :
+	class Line : public Shape
+	{
+	public:
+		void draw() override;
+	};
+}
 
-
-};
-
-
-#endif
+#endif // !LINE_H

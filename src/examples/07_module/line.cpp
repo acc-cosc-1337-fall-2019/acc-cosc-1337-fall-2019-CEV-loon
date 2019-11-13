@@ -1,4 +1,8 @@
-//line.cpp
-#include "line.h"
+#include"../07_module/line.h"
 
-void line::draw
+//line.cpp
+
+void mod7ex::Line::draw()
+{
+	std::cout << "Draw line\n"; 
+}

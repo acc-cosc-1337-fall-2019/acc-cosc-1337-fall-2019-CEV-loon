@@ -1,15 +1,16 @@
 //shape.h
-#IFNDEF SHAPE_H
-#DEFINE SHAPE_H
+#ifndef SHAPE_H
+#define SHAPE_H
+#include<iostream>
+using std::cout;
 
-
-class shape
+namespace mod7ex
 {
-public :
-	virtual void draw() = 0:
-
-
-};
-
+	class Shape
+	{
+	public:
+		virtual void draw() = 0;//pure virtual function, abstract class
+	};
+}
 
 #endif
