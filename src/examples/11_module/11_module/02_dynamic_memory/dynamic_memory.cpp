@@ -1,6 +1,7 @@
 #include "dynamic_memory.h"
 #include<iostream>
 //
+#include"dynamic_memory.h"
 using std::cout;
 
 int* return_pointer(int number)
