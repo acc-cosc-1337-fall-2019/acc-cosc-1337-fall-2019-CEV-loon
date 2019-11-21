@@ -1,2 +1,0 @@
-//
-void memory_leak();

@@ -17,3 +17,16 @@ TEST_CASE("test vector w heap var")
 	//v[1] = 5;
 	REQUIRE(v[1] != v2[1]);
 }
+Vector get_vector()
+{
+	Vector v(1);
+	v = get_vector();
+}
+TEST_CASE("example by value")
+{
+	Vector v(1);
+	v = get_vector();
+
+	REQUIRE(v.size() == 3);
+
+}
