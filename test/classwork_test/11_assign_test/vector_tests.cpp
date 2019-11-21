@@ -4,9 +4,16 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
-TEST_CASE(" test vector w stack mem")
+TEST_CASE(" test vector w stack var")
 {
 	vector v(5);
 	vector v2 = v;
 	REQUIRE(v.size() == v2.size());
+}
+TEST_CASE("test vector w heap var")
+{
+	vector v(5);
+	vector v2 = v;
+	//v[1] = 5;
+	REQUIRE(v[1] != v2[1]);
 }
