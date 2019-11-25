@@ -1,51 +1,47 @@
+#include "vector.h"
 //
-#include"vector.h"
-#include<iostream>
-vector::Vector(size_t sz)
-	:size{ sz }, nums{ new int[sz] }
+Vector::Vector(size_t sz)
+	: size{sz}, nums{new int[sz]}
 {
-	for (size_t i = 0; i < sz; ++1)
+	for (size_t i = 0; i < sz; ++i) 
 	{
-		nums[i]=0
+		nums[i] = 0;
 	}
 }
 
-Vector::vector(const Vecto& v)
-: size{ sizev.size }, nums{ new int[v.size] }
+Vector::Vector(const Vector& v) 
+	: size{v.size}, nums{new int[v.size]}
 {
-	for (size_t i = 0; i < size; ++i)
+	for (size_t i = 0; i < size; ++i) 
 	{
 		nums[i] = v[i];
 	}
 }
 
-Vector& Vector::operator=(const Vector& v)
+Vector& Vector::operator=(const Vector& v) 
 {
 	int* temp = new int[v.size];
-	for (size_t i = 0; i < v.size; ++i)
+
+	for (size_t i = 0; i < v.size; ++i) 
 	{
 		temp[i] = v[i];
 	}
+
 	delete[] nums;
 	nums = temp;
 	size = v.size;
-	return*this;
+
+	return *this;
 }
 
-Vector::~Vector()
-{
-	std::cout << "delete array" ; 
-	delete[] nums;
-}
-
-Vector::Vector(Vector&& v);// move constructor
-; size{ v.size }, nums{ v.nums }
+Vector::Vector(Vector&& v)//move constructor
+	: size{v.size}, nums{v.nums}
 {
 	v.size = 0;
 	v.nums = nullptr;
-
 }
-Vector& Vector::operator=(Vector&& v);
+
+Vector& Vector::operator=(Vector&& v)//move assignment
 {
 	delete nums;
 	nums = v.nums;
@@ -53,6 +49,10 @@ Vector& Vector::operator=(Vector&& v);
 	v.nums = nullptr;
 	v.size = 0;
 
+	return *this;
+}
 
-
+Vector::~Vector() 
+{
+	delete[] nums;
 }
