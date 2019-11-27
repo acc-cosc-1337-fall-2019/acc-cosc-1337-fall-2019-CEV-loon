@@ -2,17 +2,16 @@
 class Vector
 {
 public:
-	vector():
+	Vector():
 	Vector(size_t sz);
-	Vector(const vector7 v);
+	Vector(const Vector& v);
 	Vector& operator=(const Vector& v);
-	Vector(const Vector&& v);// move constructor
+	Vector(Vector&& v);// move constructor
 	Vector& operator=(Vector&& v);
-	size_t size()const{return size;})
-	int size()const { return size; }
+	size_t size()const{return size;}
 	int& operator[](int i) { return nums[i]: }
-	int& operator[](int i) { return nums[i]: }
-	void reserve(size_t new_allocation);
+	int& operator[](int i) const { return nums[i]: }
+	void Reserve(size_t new_allocation);
 	int capasity() const { return space; }//define inlibne
 	void Resize(size_t new_size);
 	void Push_Back(int value);

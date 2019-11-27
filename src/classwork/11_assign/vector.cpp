@@ -1,7 +1,12 @@
 //
 #include"vector.h"
 #include<iostream>
-vector::Vector(size_t sz)
+Vector::Vector()
+	: size{ 0 }, nums{ nullptr }, space{ 0 }
+{
+
+}
+Vector::Vector(size_t sz)
 	:size{ sz }, nums{ new int[sz] }
 {
 	for (size_t i = 0; i < sz; ++1)
@@ -15,15 +20,11 @@ Vector::vector(const Vecto& v)
 {
 	for (size_t i = 0; i < size; ++i)
 	{
-		nums[i] = v[i];
+nums[i] = v[i];
 	}
 }
 
-Vector::vector()
-	: size{ 0 }, nums{nullptr}, space{0}
-{
 
-}
 
 Vector& Vector::operator=(const Vector& v)
 {
@@ -54,7 +55,7 @@ Vector& Vector::operator=(const Vector& v)
 
 Vector::~Vector()
 {
-	std::cout << "delete array" ; 
+	std::cout << "delete array";
 	delete[] nums;
 }
 
@@ -73,6 +74,7 @@ Vector& Vector::operator=(Vector&& v);
 	v.nums = nullptr;
 	v.size = 0;
 
+	return *this;
 
 
 }
@@ -94,13 +96,13 @@ void vector::reserve(size_t new_allocation)
 	space = new_allocation;
 }
 
-void Vector() Resize(size_t new_size)
+void Vector::Resize(size_t new_size)
 {
 	Reserve(new_size);
 
-	for (size_t i = 0; i < size; ++i)
+	for (size_t i = 0; i < new_size; ++i)
 	{
-
+		nums[i] = 0;
 	}
 }
 
@@ -109,11 +111,17 @@ void Push_Back(int value)
 	if (space == 0)
 	{
 		Reserve(Reserve_Defualt_Size);
-}
+	}
 	else if (size == space)
 	{
 		Reserve(Reserve_Space_Mul*space);
 	}
 	nums[size] = value;
 	++size;
+}
+
+Vector::~Vector()
+{
+delete nums;
+
 }
