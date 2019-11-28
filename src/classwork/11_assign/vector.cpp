@@ -1,22 +1,24 @@
 //
 #include"vector.h"
 #include<iostream>
-Vector::Vector()
+template<typename T>
+Vector<T>::Vector()
 	: size{ 0 }, nums{ nullptr }, space{ 0 }
 {
 
 }
-Vector::Vector(size_t sz)
-	:size{ sz }, nums{ new int[sz] }
+template<typename T>
+Vector<T>::Vector(size_t sz)
+	: size{ sz }, nums{ new T[sz] }, space{ sz }
 {
 	for (size_t i = 0; i < sz; ++1)
 	{
 		nums[i]=0
 	}
 }
-
-Vector::vector(const Vecto& v)
-: size{ sizev.size }, nums{ new int[v.size] }
+template<typename T>
+Vector<T>::Vector(const Vector<T>& v)
+: size{ sizev.size }, nums{ new T[v.size]}, space{v.size}
 {
 	for (size_t i = 0; i < size; ++i)
 	{
@@ -25,14 +27,14 @@ nums[i] = v[i];
 }
 
 
-
-Vector& Vector::operator=(const Vector& v)
+template<typename T>
+Vector<T>& Vector<T>::operator=(const Vector<T>& v)
 {
-	if (this == &v)
+	if (this == &v)//avoid self copy
 	{
 		return *this;
 	}
-	/*if (v.space <= space)
+	if (v.size <= space)
 	{
 		for (size_t i = 0; i < v.size; ++i)
 		{
@@ -40,8 +42,9 @@ Vector& Vector::operator=(const Vector& v)
 		}
 		size = v.size
 			return *this;
-	}*/
-	int* temp = new int[v.size];
+	}
+	T* temp = new T[v.size];
+
 	for (size_t i = 0; i < v.size; ++i)
 	{
 		temp[i] = v[i];
@@ -52,21 +55,21 @@ Vector& Vector::operator=(const Vector& v)
 	space = v.size;
 	return*this;
 }
-
-Vector::~Vector()
+template<typename T>
+Vector<t>::~Vector()
 {
 	std::cout << "delete array";
 	delete[] nums;
 }
 
-Vector::Vector(Vector&& v);// move constructor
+Vector<T>::Vector(Vector<T>&& v);// move constructor
 ; size{ v.size }, nums{ v.nums }
 {
 	v.size = 0;
 	v.nums = nullptr;
 
 }
-Vector& Vector::operator=(Vector&& v);
+Vector<T>& Vector<T>::operator=(Vector<T>&& v);//move assignment
 {
 	delete nums;
 	nums = v.nums;
@@ -78,13 +81,14 @@ Vector& Vector::operator=(Vector&& v);
 
 
 }
-void vector::reserve(size_t new_allocation)
+ template<typename T>
+void vector<T>::reserve(size_t new_allocation)
 {
 	if (new_allocation <= space)
 	{
 		return;
 	}
-	int*temp = new int[new_allocation];
+	T*temp = new <T>[new_allocation];
 
 
 	for (size_t i = 0; i < size; ++i)
@@ -95,18 +99,19 @@ void vector::reserve(size_t new_allocation)
 	nums = temp;
 	space = new_allocation;
 }
-
-void Vector::Resize(size_t new_size)
+template<typename T>
+void Vector<T>::Resize(size_t new_size)
 {
 	Reserve(new_size);
 
-	for (size_t i = 0; i < new_size; ++i)
+	for (size_t i = 1; i < new_size; ++i)
 	{
 		nums[i] = 0;
 	}
+	size = new_size;
 }
-
-void Push_Back(int value)
+template<typename T>
+void Vector<T>::Push_Back(T value)
 {
 	if (space == 0)
 	{
@@ -114,14 +119,15 @@ void Push_Back(int value)
 	}
 	else if (size == space)
 	{
-		Reserve(Reserve_Space_Mul*space);
+		Reserve(Reserve_Space_Mul * space);
 	}
 	nums[size] = value;
 	++size;
 }
-
-Vector::~Vector()
+template<typename T>
+Vector<T>::~Vector()
 {
 delete nums;
 
 }
+template class Vector<int>;

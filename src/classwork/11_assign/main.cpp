@@ -1,6 +1,6 @@
 
 #include "vector.h"
-Vector get_vector();
+
 
 
 int main()
@@ -12,9 +12,9 @@ int main()
 	return 0;
 
 }
-Vector get_vector()// return by value
+Vector<T> get_vector()// return by value
 {
-	Vector v(3);
+	Vector<T> v(3);
 	return v;
 
 }
