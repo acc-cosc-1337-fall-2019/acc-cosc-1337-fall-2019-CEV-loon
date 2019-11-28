@@ -12,9 +12,9 @@ int main()
 	return 0;
 
 }
-Vector<T> get_vector()// return by value
+/*Vector<T> get_vector()// return by value
 {
 	Vector<T> v(3);
 	return v;
 
-}
+}*/

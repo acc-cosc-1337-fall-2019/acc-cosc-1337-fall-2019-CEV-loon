@@ -1,6 +1,5 @@
 #include "ref_pointers.h"
-#include "main.cpp"
-//
+
 
 void ref(int &number, int* numberPtr)
 {

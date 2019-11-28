@@ -30,7 +30,7 @@ nums[i] = v[i];
 template<typename T>
 Vector<T>& Vector<T>::operator=(const Vector<T>& v)
 {
-	if (this == &v)//avoid self copy
+	if (this == <T>&v)//avoid self copy
 	{
 		return *this;
 	}
@@ -56,11 +56,11 @@ Vector<T>& Vector<T>::operator=(const Vector<T>& v)
 	return*this;
 }
 template<typename T>
-Vector<t>::~Vector()
-{
-	std::cout << "delete array";
-	delete[] nums;
-}
+//Vector<t>::~Vector()
+//{
+//	std::cout << "delete array";
+//	delete[] nums;
+//}
 
 Vector<T>::Vector(Vector<T>&& v);// move constructor
 ; size{ v.size }, nums{ v.nums }
@@ -110,6 +110,7 @@ void Vector<T>::Resize(size_t new_size)
 	}
 	size = new_size;
 }
+
 template<typename T>
 void Vector<T>::Push_Back(T value)
 {
@@ -124,6 +125,7 @@ void Vector<T>::Push_Back(T value)
 	nums[size] = value;
 	++size;
 }
+
 template<typename T>
 Vector<T>::~Vector()
 {
