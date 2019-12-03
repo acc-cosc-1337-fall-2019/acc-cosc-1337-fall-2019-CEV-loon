@@ -1,5 +1,7 @@
 #include "arr_functions.h"
+#include<iostream>
 using std::cout;
+
  int main() 
 {
 	const int SIZE = 5;
