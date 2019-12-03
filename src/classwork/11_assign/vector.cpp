@@ -63,7 +63,7 @@ template<typename T>
 //}
 
 Vector<T>::Vector(Vector<T>&& v);// move constructor
-; size{ v.size }, nums{ v.nums }
+; size{v.size}, nums{v.nums}
 {
 	v.size = 0;
 	v.nums = nullptr;
