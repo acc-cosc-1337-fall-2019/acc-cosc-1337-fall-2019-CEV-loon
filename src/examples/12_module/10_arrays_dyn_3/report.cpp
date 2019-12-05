@@ -8,6 +8,7 @@ for (int i = 0; i < size; ++i)
 }
 myreport::myreport()
 {
+	accounts = new bankaccount*[size];
 	//dyn heap mem  //for each 5 addresses
 	accounts = new BankAccount*[size]; //call default constructor
 }
