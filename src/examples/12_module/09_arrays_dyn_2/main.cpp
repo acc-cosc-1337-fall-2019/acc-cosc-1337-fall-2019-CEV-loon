@@ -4,6 +4,7 @@
 int main() 
 {
 	
-
+	report r;
+	r.display();
 	return 0;
 }
