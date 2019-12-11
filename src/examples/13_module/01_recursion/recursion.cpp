@@ -29,3 +29,7 @@ int factorial(int n)
 	std::cout << "unload stack \n";
 	return f;
 }
+
+void call_myself()
+{
+}
